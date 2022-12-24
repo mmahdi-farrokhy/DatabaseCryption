@@ -12,10 +12,10 @@ namespace ProMap_DataBase_Crypter
         private static String query = "";
 
         // firstOrDefault()
-        public static ECUsSpecification firstOrDefault(ref ECUsSpecification es, int DefaultID)
+        public static ECUsSpecification firstOrDefault(ref ECUsSpecification es, int defaultID)
         {
             ECUsSpecification Record = new ECUsSpecification();
-            query = "SELECT * FROM ECUsSpecification WHERE ID = " + DefaultID.ToString() + ";";
+            query = "SELECT * FROM ECUsSpecification WHERE ID = " + defaultID.ToString() + ";";
 
             using (OleDbConnection con = new OleDbConnection(connStr))
             {
@@ -176,34 +176,34 @@ namespace ProMap_DataBase_Crypter
 
             return isUpdated;
         }
-        public static bool updateTable(AdvanceRemap New_Value)
+        public static bool updateTable(AdvanceRemap newValue)
         {
             bool isUpdated = false;
             OleDbConnection dbcon = new OleDbConnection(connStr);
             query = "UPDATE AdvanceRemap SET " +
-                "Type ='" + New_Value.Type +
-                "' ,TableName ='" + New_Value.TableName +
-                "' ,RowsCount =" + New_Value.RowsCount +
-                " ,ColsCount =" + New_Value.ColsCount +
-                " ,X_Name ='" + New_Value.X_Name +
-                "' ,Y_Name ='" + New_Value.Y_Name +
-                "' ,X_Min =" + New_Value.X_Min +
-                " ,X_Max =" + New_Value.X_Max +
-                " ,Y_Min =" + New_Value.Y_Min +
-                " ,Y_Max =" + New_Value.Y_Max +
-                " ,Address_Start ='" + New_Value.Address_Start +
-                "' ,Address_End ='" + New_Value.Address_End +
-                "' ,DataSize =" + New_Value.DataSize +
-                " ,Type_Cryption ='" + New_Value.Type_Cryption +
-                "' ,TableName_Cryption ='" + New_Value.TableName_Cryption +
-                "' ,RowsCount_Cryption ='" + New_Value.RowsCount_Cryption +
-                "' ,ColsCount_Cryption ='" + New_Value.ColsCount_Cryption +
-                "' ,X_Name_Cryption ='" + New_Value.X_Name_Cryption +
-                "' ,Y_Name_Cryption = '" + New_Value.Y_Name_Cryption +
-                "' ,Address_Start_Cryption = '" + New_Value.Address_Start_Cryption +
-                "' ,Address_End_Cryption = '" + New_Value.Address_End_Cryption +
-                "' ,DataSize_Cryption = '" + New_Value.DataSize_Cryption +
-                "' WHERE ID = " + New_Value.ID;
+                "Type ='" + newValue.Type +
+                "' ,TableName ='" + newValue.TableName +
+                "' ,RowsCount =" + newValue.RowsCount +
+                " ,ColsCount =" + newValue.ColsCount +
+                " ,X_Name ='" + newValue.X_Name +
+                "' ,Y_Name ='" + newValue.Y_Name +
+                "' ,X_Min =" + newValue.X_Min +
+                " ,X_Max =" + newValue.X_Max +
+                " ,Y_Min =" + newValue.Y_Min +
+                " ,Y_Max =" + newValue.Y_Max +
+                " ,Address_Start ='" + newValue.Address_Start +
+                "' ,Address_End ='" + newValue.Address_End +
+                "' ,DataSize =" + newValue.DataSize +
+                " ,Type_Cryption ='" + newValue.Type_Cryption +
+                "' ,TableName_Cryption ='" + newValue.TableName_Cryption +
+                "' ,RowsCount_Cryption ='" + newValue.RowsCount_Cryption +
+                "' ,ColsCount_Cryption ='" + newValue.ColsCount_Cryption +
+                "' ,X_Name_Cryption ='" + newValue.X_Name_Cryption +
+                "' ,Y_Name_Cryption = '" + newValue.Y_Name_Cryption +
+                "' ,Address_Start_Cryption = '" + newValue.Address_Start_Cryption +
+                "' ,Address_End_Cryption = '" + newValue.Address_End_Cryption +
+                "' ,DataSize_Cryption = '" + newValue.DataSize_Cryption +
+                "' WHERE ID = " + newValue.ID;
 
             try
             {

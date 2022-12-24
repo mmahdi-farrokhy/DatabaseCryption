@@ -792,6 +792,5 @@ namespace ProMap_DataBase_Crypter
 
             return cipherText;
         }
-
     }
 }
